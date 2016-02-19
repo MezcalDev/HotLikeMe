@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="HotLikeMe.Login"
+			 Title = "Login ">
+	<ContentPage.Content>
+			<StackLayout VerticalOptions = "StartAndExpand">
+	
+
+			<Button x:Name="loginButton" Text="LogIn" Clicked="OnLogin" />
+
+			<Label x:Name="messageLabel" />
+		</StackLayout>
+</ContentPage.Content>
+</ContentPage>

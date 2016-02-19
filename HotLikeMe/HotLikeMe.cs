@@ -1,27 +1,24 @@
 ﻿using System;
-
+using Microsoft.WindowsAzure.MobileServices;
 using Xamarin.Forms;
 
 namespace HotLikeMe
 {
 	public class App : Application
 	{
+		class Constants {
+
+			public const string UserNotFound = "The user don't exist";
+		}
+		public MobileServiceClient Client = new MobileServiceClient("https://hlmt.azurewebsites.net");
 		public App ()
 		{
-			// The root page of your application
-			MainPage = new ContentPage {
-				Content = new StackLayout {
-					VerticalOptions = LayoutOptions.Center,
-					Children = {
-						new Label {
-							XAlign = TextAlignment.Center,
-							Text = "Welcome to Xamarin Forms!"
-						}
-					}
-				}
-			};
+			MainPage = new Login ();
 		}
 
+		public String test;
+		
+ 
 		protected override void OnStart ()
 		{
 			// Handle when your app starts
