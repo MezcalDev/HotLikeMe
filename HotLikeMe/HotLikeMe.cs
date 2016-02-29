@@ -2,6 +2,7 @@
 using Microsoft.WindowsAzure.MobileServices;
 using Xamarin.Forms;
 
+
 namespace HotLikeMe
 {
 	public class App : Application
@@ -10,6 +11,7 @@ namespace HotLikeMe
 
 			public const string UserNotFound = "The user don't exist";
 		}
+
 		public MobileServiceClient Client = new MobileServiceClient("https://hlmt.azurewebsites.net");
 		public App ()
 		{
