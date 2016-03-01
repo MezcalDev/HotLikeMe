@@ -12,7 +12,7 @@ namespace HotLikeMe
 			public const string UserNotFound = "The user don't exist";
 		}
 
-		public MobileServiceClient Client = new MobileServiceClient("https://hlmt.azurewebsites.net");
+		public MobileServiceClient Client = new MobileServiceClient("http://hotlikeme.azurewebsites.net");
 		public App ()
 		{
 			MainPage = new Login ();
