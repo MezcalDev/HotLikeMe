@@ -21,7 +21,7 @@ namespace HotLikeMe
 		public String test;
 		
  
-		protected override void OnStart ()
+		/*protected override void OnStart ()
 		{
 			// Handle when your app starts
 		}
@@ -35,6 +35,8 @@ namespace HotLikeMe
 		{
 			// Handle when your app resumes
 		}
+	  */
+
 	}
 }
 

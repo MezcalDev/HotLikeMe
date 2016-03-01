@@ -5,8 +5,11 @@
 	<ContentPage.Content>
 		<StackLayout Padding="10,30,10,10" Spacing="10">
 
+
+
 			<Label Text = "HotLikeMe"
-				   Font = "30"
+				   Font = "40"
+				   TextColor = "Lime"
 				   HorizontalOptions = "Center"
 				   VerticalOptions = "Center"/>
 
@@ -15,9 +18,10 @@
 				   HorizontalOptions = "Start"
 				   VerticalOptions = "Center"/>
 
-			<Label Text = "HotLikeMe"
+			<!-- <Label Text = "HotLikeMe"
 				   HorizontalOptions = "Start"
 				   VerticalOptions = "Center"/>
+			 -->
 
 			<Entry x:Name = "User"
 				   Placeholder = "Usuario"

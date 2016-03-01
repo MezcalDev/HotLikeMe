@@ -15,21 +15,14 @@ namespace HotLikeMe
 			InitializeComponent ();
 
 		}
-		async void OnLoginClicked (object sender, EventArgs e){
+		async void OnLogin (object sender, EventArgs e){
 			MobileServiceUser user;
 
 			user = await DependencyService.Get<IMobileClient> ()
-				.LoginAsync (MobileServiceAuthenticationProvider.Facebook);
+				.LoginAsync (MobileServiceAuthenticationProvider.Facebook, null);
 		
 		}
-
-
-		public async Task<MobileServiceUser> LoginAync(MobileServiceAuthenticationProvider provider)
-		{
-			return await App.Client.LoginAsync (Forms.context, provider);
-		}
-
-	
+			
 	}
 }
 
