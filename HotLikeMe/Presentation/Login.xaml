@@ -1,48 +1,25 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-			 x:Class="HotLikeMe.Login">
+			 x:Class="HotLikeMe.Login"
+			 BackgroundColor = "Maroon">
 	<ContentPage.Content>
 		<StackLayout Padding="10,30,10,10" Spacing="10">
 
-
-
 			<Label Text = "HotLikeMe"
 				   Font = "40"
-				   TextColor = "Lime"
+				   TextColor = "White"
 				   HorizontalOptions = "Center"
-				   VerticalOptions = "Center"/>
+				   VerticalOptions = "Center"/>	
 
-		
-			<Label Text = "Usuario"
-				   HorizontalOptions = "Start"
-				   VerticalOptions = "Center"/>
-
-			<!-- <Label Text = "HotLikeMe"
-				   HorizontalOptions = "Start"
-				   VerticalOptions = "Center"/>
-			 -->
-
-			<Entry x:Name = "User"
-				   Placeholder = "Usuario"
-				   HorizontalOptions = "FillAndExpand"
-				   VerticalOptions = "Center"/>
-
-			<Label Text = "Clave"
-				   HorizontalOptions = "Start"
-				   VerticalOptions = "Center"/>
-
-			<Entry x:Name = "Pass"
-				   Placeholder = "Password"
-				   IsPassword = "true"
-				   HorizontalOptions = "FillAndExpand"
-				   VerticalOptions = "Center"/>
-				
-			<Button x:Name="loginButton" 
+			<Button x:Name="loginButton" 					 
 					Text="LogIn Whit Facebook" 
 					Clicked="OnLogin"
+					HorizontalOptions = "Center"
+					VerticalOptions = "Center"
 					BackgroundColor = "Navy"
-					TextColor = "White"/>
+					TextColor = "White"
+					BorderRadius = "50"/>
 
 		</StackLayout>
 	</ContentPage.Content>

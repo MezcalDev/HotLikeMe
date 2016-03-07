@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="HotLikeMe.Rate"
+			 BackgroundColor = "Maroon">
+	<ContentPage.Content>
+		<AbsoluteLayout VerticalOptions = "FillAndExpand" HorizontalOptions = "Center"   >
+
+			<Label Text ="HotLikeMe"
+			VerticalOptions = "Start"
+			Font = "25"
+			HorizontalTextAlignment = "Center"
+	    	IsVisible = "true"
+	     	FontAttributes = "Bold"
+			TextColor = "White" />
+
+		</AbsoluteLayout>
+	</ContentPage.Content>
+</ContentPage>

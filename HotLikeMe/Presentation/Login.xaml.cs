@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 using Microsoft.WindowsAzure.MobileServices;
-
 using Xamarin.Forms;
 
 namespace HotLikeMe
@@ -13,16 +12,28 @@ namespace HotLikeMe
 		public Login ()
 		{
 			InitializeComponent ();
-
-		}
-		async void OnLogin (object sender, EventArgs e){
-			MobileServiceUser user;
-
-			user = await DependencyService.Get<IMobileClient> ()
-				.LoginAsync (MobileServiceAuthenticationProvider.Facebook, null);
-		
 		}
 			
+
+		async void OnLogin (object sender, EventArgs e){
+			
+			MobileServiceUser user;
+			user = await DependencyService.Get<IMobileClient> ()
+				.LoginAsync (MobileServiceAuthenticationProvider.Facebook, null);
+
+
+			if (user == null)
+			{
+				return;
+			}
+
+			this.Navigation.PushModalAsync (new Rate());
+
+		}
+
 	}
 }
+
+
+
 
