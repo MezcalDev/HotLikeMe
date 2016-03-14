@@ -18,8 +18,8 @@ namespace HotLikeMe
 		async void OnLogin (object sender, EventArgs e){
 			
 			MobileServiceUser user;
-			user = await DependencyService.Get<IMobileClient> ()
-				.LoginAsync (MobileServiceAuthenticationProvider.Facebook, null);
+			var client = DependencyService.Get<IMobileClient> ();
+			user = await client.LoginAsync (MobileServiceAuthenticationProvider.Facebook, null);
 
 
 			if (user == null)
@@ -27,7 +27,7 @@ namespace HotLikeMe
 				return;
 			}
 
-			this.Navigation.PushModalAsync (new Rate());
+			this.Navigation.PushModalAsync (new UserPhotos());
 
 		}
 

@@ -1,4 +1,4 @@
-﻿	using System;
+﻿using System;
 using Microsoft.WindowsAzure.MobileServices;
 using HotLikeMe;
 using System.Net;
@@ -10,6 +10,7 @@ namespace HotLikeMe
 	public interface IMobileClient
 	{
 		Task<MobileServiceUser> LoginAsync (MobileServiceAuthenticationProvider provider, JObject token);
+		Task<String> GetName();
 	}
 }
 
