@@ -42,7 +42,7 @@ namespace HotLikeMe.Droid
 		}
 
 		public async Task<String> GetName() {
-			access_token = await GetToken();
+			access_token = await GetToken ();
 			FacebookClient fb = new FacebookClient(access_token);
 			dynamic result = await fb.GetTaskAsync ("me");
 			dynamic name = result ["name"];
