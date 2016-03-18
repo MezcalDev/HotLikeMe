@@ -26,8 +26,8 @@ namespace HotLikeMe
 			{
 				return;
 			}
-
-			this.Navigation.PushModalAsync (new UserPhotos());
+			var source = await client.GetImage();
+			await this.Navigation.PushModalAsync (new UserPhotos(source));
 
 		}
 

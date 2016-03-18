@@ -42,12 +42,24 @@ namespace HotLikeMe.Droid
 		}
 
 		public async Task<String> GetName() {
-			access_token = await GetToken ();
+			
+			var access_token = await GetToken ();
 			FacebookClient fb = new FacebookClient(access_token);
 			dynamic result = await fb.GetTaskAsync ("me");
 			dynamic name = result ["name"];
 			return name;
 		}
+
+		public async Task<FBImageSource> GetImage(){
+			var access_token = await GetToken ();
+			FacebookClient fb = new FacebookClient (access_token);
+			dynamic result = await fb.GetTaskAsync ("me/photos", new {fields = "picture"});
+			var source = new HotLikeMe.FBImageSource (result);
+			return source;
+		
+		 
+		} 
+
 	}
 }
 

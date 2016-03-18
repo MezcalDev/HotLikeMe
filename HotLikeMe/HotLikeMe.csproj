@@ -42,6 +42,8 @@
     <Compile Include="Presentation\UserPhotos.xaml.cs">
       <DependentUpon>UserPhotos.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\FBImageSource.cs" />
+    <Compile Include="Infrastructure\FBPhoto.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Insights.1.11.4\build\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.11.4\build\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.targets')" />
@@ -82,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Presentation\" />
+    <Folder Include="Infrastructure\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Presentation\Login.xaml">
