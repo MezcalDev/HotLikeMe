@@ -2,20 +2,6 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			 x:Class="HotLikeMe.UserPhotos"
-			 BackgroundColor = "White">
-
-	<ContentPage.Content>
-	<StackLayout VerticalOptions ="Center" HorizontalOptions = "Center">
-			<Label Text ="HotLikeMe"
-			VerticalOptions = "Start"
-			Font = "25"
-			HorizontalTextAlignment = "Center"
-	    	IsVisible = "true"
-	     	FontAttributes = "Bold"
-			TextColor = "Black" />
-
-			<Image x:Name = "image"/>
-
-		</StackLayout>
-	</ContentPage.Content>
+			 Title = "HotLikeMe">
+	
 </ContentPage>

@@ -17,14 +17,14 @@ namespace HotLikeMe
 
 		async void OnLogin (object sender, EventArgs e){
 			
-			MobileServiceUser user;
+			MobileServiceUser user = new MobileServiceUser("FAKE");
 			var client = DependencyService.Get<IMobileClient> ();
-			user = await client.LoginAsync (MobileServiceAuthenticationProvider.Facebook, null);
+			//user = await client.LoginAsync (MobileServiceAuthenticationProvider.Facebook, null);
 
 
 			if (user == null)
 			{
-				return;
+				return ;
 			}
 			var source = await client.GetImage();
 			await this.Navigation.PushModalAsync (new UserPhotos(source));

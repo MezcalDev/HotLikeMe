@@ -28,7 +28,8 @@ namespace HotLikeMe.Droid
 			return user;
 
 		} 
-		private async Task<string> GetToken(){			
+		private async Task<string> GetToken(){
+			return "CAACEdEose0cBAJifuZCREWfUZBmFjZAVZB7NNQHstetM54iIEZBZCekZAcvGPfxOxLRSKTmdTWCBAMWZC6ZBUOvtZAUGRWmCvIusGcWiMeQIw8B77ydDBB2dkKQt2HiPoxHNAAltCxleG6eXFnRSMgulkDpI7HBatisXDVHuN3qaEFKsSuK2PKZB6iZCZBGnq1mBfZC78FqL8APsH68AZDZD";
 			if (access_token != null){
 				return access_token;
 
