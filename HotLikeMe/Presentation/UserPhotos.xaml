@@ -3,5 +3,19 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			 x:Class="HotLikeMe.UserPhotos"
 			 Title = "HotLikeMe">
-	
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="StartAndExpand">
+			<Grid>
+		
+				<Button
+					Text="Done"
+					HorizontalOptions = "Start"
+					VerticalOptions = "Start"				 					 
+					BackgroundColor = "Navy"
+					TextColor = "White"
+					BorderRadius = "50"/>
+				 
+			</Grid>
+		</StackLayout>	
+	</ContentPage.Content>
 </ContentPage>

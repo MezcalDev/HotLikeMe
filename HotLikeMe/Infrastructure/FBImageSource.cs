@@ -14,7 +14,8 @@ namespace HotLikeMe
 		{
 			
 			dynamic data = jsonResult ["data"];
-			foreach (dynamic imageDictionary in data){
+			foreach (dynamic imageDictionary in data)
+			{
 				photos.Add (new FBPhoto (imageDictionary ["id"], imageDictionary ["picture"]));
 			}													
 		}
