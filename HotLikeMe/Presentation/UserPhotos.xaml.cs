@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
+using System.Threading.Tasks;
 
 
 namespace HotLikeMe
 {
 	public partial class UserPhotos : ContentPage
 	{
-		public  List<Image> ImgArray = new List<Image>();
+		public  List<int> indexList= new List<int>();
 		FBImageSource source;
 
 		public UserPhotos (FBImageSource source)
@@ -46,6 +47,7 @@ namespace HotLikeMe
 
 			for(int x = 0; x < Row; x++)
 			{				
+				
 				var RowDefinition = new RowDefinition {Height = new GridLength(130, GridUnitType.Absolute)};	
 				grid.RowDefinitions.Add(RowDefinition);	
 				for(int y = 0; y < 3; y++)
@@ -63,13 +65,12 @@ namespace HotLikeMe
 					tapGestureRecognizer.Tapped += (imageSource, eventArgs) =>
 					
 					{
-						 
 						bool selected = false;
-						for(int i = 0; i < ImgArray.Count; i++)
-						{
+						for(int i = 0; i < indexList.Count; i++)
+						{	
 							
-							Image selectedImage = ImgArray[i];
-							if(selectedImage == imageSource)
+							int selectedImage = indexList[i];
+							if(selectedImage == index)
 							{
 							selected = true;
 							}
@@ -79,27 +80,57 @@ namespace HotLikeMe
 						if (selected)
 						{
 							ViewExtensions.RotateTo(imageSource as Image, 0, 500,Easing.SinOut);	
-							ImgArray.Remove(imageSource as Image);
+							indexList.Remove(index);
 
 						}else
 
 						{
 							ViewExtensions.RotateTo(imageSource as Image, 15.0, 500,Easing.SinOut);
-							ImgArray.Add(imageSource as Image);
+							indexList.Add(index);
 						}
 					};
 
 					image.GestureRecognizers.Add (tapGestureRecognizer);
 				}
 			};
-
 			var scroll = new ScrollView ();
 			scroll.Content = grid;
-			this.Content = scroll;
-			
-			}
-	}
-	
-}
+			//this.Content = scroll;
+			Button button = new Button 
+			{
+				Text = "Done",
+				BackgroundColor = Color.Red,
+				TextColor = Color.White,
+				HorizontalOptions = LayoutOptions.EndAndExpand,
+				VerticalOptions = LayoutOptions.CenterAndExpand,
+				BorderRadius = 40,
+			};
 
+			button.Clicked += button_Clicked;
+			this.Content = new StackLayout 
+			{
+				Children =
+				{
+					button,	
+					scroll
+				}
+			};
+		}
+
+		public void button_Clicked (object sender, EventArgs e)
+		{
+			var client = DependencyService.Get<IMobileClient> ();
+			for (int i = 0; i < indexList.Count; i++) 
+			{	
+				
+				int index = indexList[i];
+				var selectPhoto = source.GetPhoto (index);  
+				client.GetHDImage (selectPhoto);
+
+				//toDo : agregar try catch para verificar que se suban correctamente las fotos 
+
+			}
+		}
+	}
+}
 	

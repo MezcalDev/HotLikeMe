@@ -19,6 +19,7 @@ namespace HotLikeMe
 				photos.Add (new FBPhoto (imageDictionary ["id"], imageDictionary ["picture"]));
 			}													
 		}
+
 		public int PhotoCount(){
 			return photos.Count;
 				
@@ -27,9 +28,7 @@ namespace HotLikeMe
 		public FBPhoto GetPhoto(int index){
 			return photos[index];
 		}
-
-
-		 
+			 
 	}
 }
 
