@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Microsoft.Azure;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Blob;
+using Microsoft.WindowsAzure.Storage.Auth;
 
 
 namespace HotLikeMe
@@ -37,6 +41,7 @@ namespace HotLikeMe
 				}
 			}
 			maxUrl = urlHD;
+					 
 		}
 	}
 }

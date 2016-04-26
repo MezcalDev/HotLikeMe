@@ -13,6 +13,7 @@ namespace HotLikeMe
 		Task<String> GetName();
 		Task<FBImageSource> GetImages();
 		void GetHDImage(FBPhoto photo);
+		void GetSAS();
 
 	}
 }
