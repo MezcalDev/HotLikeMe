@@ -11,9 +11,13 @@ namespace HotLikeMe
 	{
 		Task<MobileServiceUser> LoginAsync (MobileServiceAuthenticationProvider provider, JObject token);
 		Task<String> GetName();
+		Task<String> GetConectionString();
 		Task<FBImageSource> GetImages();
+		Task <String> GetSAS();
 		void GetHDImage(FBPhoto photo);
-		void GetSAS();
+		Task <String> UploadPhoto();
+
+
 
 	}
 }

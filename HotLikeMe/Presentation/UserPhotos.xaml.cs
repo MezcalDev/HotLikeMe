@@ -128,8 +128,8 @@ namespace HotLikeMe
 				client.GetHDImage (selectPhoto);
 
 				//toDo : agregar try catch para verificar que se suban correctamente las fotos 
-
 			}
+			client.UploadPhoto();
 		}
 	}
 }
