@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FF0E26"
+    android:weightSum="100"
+    android:minHeight="25px"
+    android:minWidth="25px">
+    <TextView
+        android:text="Sign In whit Facebook "
+        android:layout_width="match_parent"
+        android:layout_weight="20"
+        android:layout_height="0dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/txtCreateAccount"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="25sp" />
+    <Button
+        android:text="Sign In"
+        android:layout_width="match_parent"
+        android:layout_weight="15"
+        android:layout_height="0dp"
+        android:id="@+id/btnSignIn"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="15sp" />
+<!--<EditText
+ 		android:text="Enter your Name"
+        android:layout_width="match_parent"
+        android:layout_weight="10"
+        android:layout_height="0dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/txtEnteryourName"
+        android:textStyle="bold"
+        android:textSize="15sp" />
+
+     <EditText
+ 		android:text="Password"
+        android:layout_width="match_parent"
+        android:layout_weight="10"
+        android:layout_height="0dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/txtPassword"
+        android:textStyle="bold"
+        android:textSize="15sp" />-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_weight="35"
+        android:layout_height="0dp"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Progressbar1"
+            android:layout_centerInParent="true"
+            android:indeterminate="true" />
+    </RelativeLayout>
+</LinearLayout>
